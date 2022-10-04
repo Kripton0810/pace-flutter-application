@@ -16,7 +16,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Text("Hello world"),
+        appBar: AppBar(
+          title: Text("Flutter App"),
+          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.add))],
+        ),
+        body: SafeArea(child: Text("Hello world")),
       ),
     );
   }
