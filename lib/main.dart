@@ -1,9 +1,6 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pace_classes_mobile_application/components/header.dart';
-// ignore_for_file: prefer_const_constructors
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
