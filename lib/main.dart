@@ -36,6 +36,7 @@ class _HomePageState extends State<HomePage> {
       home: Scaffold(
         body: SafeArea(
             child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //top header for greeting
             Header(
@@ -43,13 +44,79 @@ class _HomePageState extends State<HomePage> {
             ),
             SingleChildScrollView(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    children: [
-                      Stack(children: [
-                        
-                      ],)
-                    ],
+                  //multiple children
+                  Text("Popular Courses"),
+                  ListView.builder(
+                    itemCount: 1,
+                    itemBuilder: (context, int key_val) {
+                      return SizedBox(
+                        key: Key("12"),
+                        width: 220,
+                        child: Column(
+                          children: [
+                            //stack is for love widget stars and image
+                            Stack(
+                              children: [
+                                Image(
+                                  image: AssetImage(
+                                      'assets/pic_for_background.png'),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 16),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Container(
+                                        margin: EdgeInsets.only(left: 16),
+                                        width: 49,
+                                        height: 28,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Center(
+                                          child: Row(
+                                            children: [
+                                              Image.asset(
+                                                  "assets/star_image.png"),
+                                              SizedBox(
+                                                width: 4,
+                                              ),
+                                              Text(
+                                                "4.8",
+                                                style: TextStyle(
+                                                    fontFamily: "DMSans"),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.only(right: 16),
+                                        width: 28,
+                                        height: 28,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Image.asset("assets/heart.png",
+                                            color: Color.fromARGB(
+                                                255, 163, 153, 153)),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      );
+                    },
                   )
                 ],
               ),
