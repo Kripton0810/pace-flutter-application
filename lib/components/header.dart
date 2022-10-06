@@ -1,7 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
   final String firstname;
+  // ignore: use_key_in_widget_constructors
   const Header({
     required this.firstname,
   });
@@ -35,7 +38,7 @@ class Header extends StatelessWidget {
                               fontSize: 28),
                         ),
                         Text(
-                          "$firstname",
+                          firstname,
                           style: TextStyle(
                               color: Colors.white,
                               fontFamily: "RedHatDisplay",
@@ -97,7 +100,6 @@ class Header extends StatelessWidget {
                 child: Row(
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                    // ignore: prefer_const_constructors
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
                       child: Image(

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pace_classes_mobile_application/components/header.dart';
@@ -11,7 +13,9 @@ void main() {
   runApp(HomePage());
 }
 
+
 class HomePage extends StatefulWidget {
+  // ignore: prefer_const_constructors_in_immutables
   HomePage({Key? key}) : super(key: key);
 
   @override
@@ -124,6 +128,7 @@ class _HomePageState extends State<HomePage> {
                                 Container(
                                   margin: EdgeInsets.only(top: 16),
                                   child: Column(
+                                    // ignore: prefer_const_literals_to_create_immutables
                                     children: [
                                       Text(
                                         "Design Thingking Fundamental",
