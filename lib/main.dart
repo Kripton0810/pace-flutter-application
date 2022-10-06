@@ -13,7 +13,6 @@ void main() {
   runApp(HomePage());
 }
 
-
 class HomePage extends StatefulWidget {
   // ignore: prefer_const_constructors_in_immutables
   HomePage({Key? key}) : super(key: key);
