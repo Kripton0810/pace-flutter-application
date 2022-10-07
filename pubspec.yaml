@@ -80,6 +80,8 @@ flutter:
         - asset: assets/fonts/red_hat_display/RedHatDisplay_Regular.ttf
         - asset: assets/fonts/red_hat_display/RedHatDisplay_Bold.ttf
           weight: 700
+        - asset: assets/fonts/red_hat_display/RedHatDisplay_Medium.ttf
+          weight: 600
     - family: DMSans
       fonts:
       - asset: assets/fonts/dm_sans/DMSans-Regular.ttf

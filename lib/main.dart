@@ -47,7 +47,19 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //multiple children
-                  Text("Popular Courses"),
+                  Text(
+                    "Popular Courses",
+                    style: TextStyle(
+                        fontFamily: "RedHatDisplay",
+                        fontWeight: FontWeight.w600,
+                        fontSize: 18,
+                        shadows: [
+                          Shadow(
+                              color: Colors.black,
+                              blurRadius: 20,
+                              offset: Offset.fromDirection(-5))
+                        ]),
+                  ),
                   Container(
                     height: 224,
                     decoration:
@@ -136,7 +148,16 @@ class _HomePageState extends State<HomePage> {
                                           fontSize: 14,
                                         ),
                                       ),
-                                      Text("Author name"),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Image.asset(
+                                            "assets/instructor.png",
+                                          ),
+                                          Text("Author name"),
+                                        ],
+                                      ),
                                       Text("Price")
                                     ],
                                   ),
