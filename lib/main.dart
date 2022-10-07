@@ -47,23 +47,29 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //multiple children
-                  Text(
-                    "Popular Courses",
-                    style: TextStyle(
-                        fontFamily: "RedHatDisplay",
-                        fontWeight: FontWeight.w600,
-                        fontSize: 18,
-                        shadows: [
-                          Shadow(
-                              color: Colors.black,
-                              blurRadius: 20,
-                              offset: Offset.fromDirection(-5))
-                        ]),
+
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 32,
+                      left: 20,
+                      bottom: 20,
+                    ),
+                    child: Text(
+                      "Popular Courses",
+                      style: TextStyle(
+                          fontFamily: "RedHatDisplay",
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18,
+                          shadows: [
+                            Shadow(
+                                color: Colors.black,
+                                blurRadius: 20,
+                                offset: Offset.fromDirection(-5))
+                          ]),
+                    ),
                   ),
-                  Container(
+                  SizedBox(
                     height: 224,
-                    decoration:
-                        BoxDecoration(color: Color.fromARGB(255, 136, 76, 76)),
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: 3,
@@ -137,28 +143,52 @@ class _HomePageState extends State<HomePage> {
                                   ],
                                 ),
                                 Container(
+                                  width: 240,
                                   margin: EdgeInsets.only(top: 16),
                                   child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     // ignore: prefer_const_literals_to_create_immutables
                                     children: [
                                       Text(
-                                        "Design Thingking Fundamental",
+                                        "Design Thinking Fundamental",
                                         style: TextStyle(
                                           fontFamily: "DMSans",
                                           fontSize: 14,
                                         ),
                                       ),
+                                      SizedBox(
+                                        height: 8,
+                                      ),
                                       Row(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.start,
                                         children: [
                                           Image.asset(
                                             "assets/instructor.png",
                                           ),
-                                          Text("Author name"),
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Text(
+                                            "Author name",
+                                            style: TextStyle(
+                                              fontFamily: "DMSans",
+                                              fontSize: 12,
+                                              color: Color(0xffA9AEB2),
+                                            ),
+                                          ),
                                         ],
                                       ),
-                                      Text("Price")
+                                      Text(
+                                        "₹105",
+                                        style: TextStyle(
+                                          fontFamily: "DMSans",
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w700,
+                                          color: Color(0xff00A9B7),
+                                        ),
+                                      )
                                     ],
                                   ),
                                 ),
