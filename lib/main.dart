@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pace_classes_mobile_application/components/course_home_page-display.dart';
 import 'package:pace_classes_mobile_application/components/header.dart';
+import 'package:pace_classes_mobile_application/data/CourseHomePageModelList.dart';
+import 'package:pace_classes_mobile_application/model/CourseHomePageModel.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -73,14 +75,10 @@ class _HomePageState extends State<HomePage> {
                     height: 224,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      itemCount: 3,
+                      itemCount: courseHomePageData.length,
                       itemBuilder: (context, item) {
                         return CourseHomePageDisplay(
-                          courseAuthor: "Subhankar Dutta",
-                          courseId: item.toString(),
-                          courseName: "Data Science",
-                          coursePrice: 500,
-                          rating: 3.4,
+                          model: courseHomePageData[item],
                         );
                       },
                     ),

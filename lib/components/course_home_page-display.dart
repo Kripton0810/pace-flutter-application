@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pace_classes_mobile_application/model/CourseHomePageModel.dart';
 
 class CourseHomePageDisplay extends StatelessWidget {
-  final String courseName;
-  final double coursePrice;
-  final String courseId;
-  final String courseAuthor;
-  final double rating;
+  final CourseHomePageModel model;
 
-  const CourseHomePageDisplay({
-    required this.courseName,
-    required this.coursePrice,
-    required this.courseId,
-    required this.courseAuthor,
-    required this.rating,
-  });
+  const CourseHomePageDisplay({required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +45,7 @@ class CourseHomePageDisplay extends StatelessWidget {
                                 width: 4,
                               ),
                               Text(
-                                rating.toString(),
+                                model.rating.toString(),
                                 style: TextStyle(fontFamily: "DMSans"),
                               )
                             ],
@@ -87,7 +78,7 @@ class CourseHomePageDisplay extends StatelessWidget {
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Text(
-                    courseName,
+                    model.courseName,
                     style: TextStyle(
                       fontFamily: "DMSans",
                       fontSize: 14,
@@ -106,7 +97,7 @@ class CourseHomePageDisplay extends StatelessWidget {
                         width: 4,
                       ),
                       Text(
-                        courseAuthor,
+                        model.courseAuthor,
                         style: TextStyle(
                           fontFamily: "DMSans",
                           fontSize: 12,
@@ -116,7 +107,7 @@ class CourseHomePageDisplay extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    "₹" + coursePrice.toString(),
+                    "₹" + model.coursePrice.toString(),
                     style: TextStyle(
                       fontFamily: "DMSans",
                       fontSize: 16,
