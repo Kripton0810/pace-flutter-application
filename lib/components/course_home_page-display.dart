@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, file_names
 import 'package:flutter/material.dart';
 import 'package:pace_classes_mobile_application/model/CourseHomePageModel.dart';
 
@@ -9,9 +10,7 @@ class CourseHomePageDisplay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (() {
-        print("hello world");
-      }),
+      onTap: (() {}),
       child: UnconstrainedBox(
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 20),

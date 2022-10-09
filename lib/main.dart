@@ -27,6 +27,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    List<dynamic> list = courseMapInfo['data'];
     return MaterialApp(
       theme: ThemeData(
         primaryColor: Color(0xff00A9B7),
@@ -75,10 +76,16 @@ class _HomePageState extends State<HomePage> {
                     height: 224,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      itemCount: courseHomePageData.length,
+                      itemCount: list.length,
                       itemBuilder: (context, item) {
+                        CourseHomePageModel model = CourseHomePageModel(
+                            courseName: list[item]['courseName'],
+                            coursePrice: list[item]['coursePrice'] * 1.0,
+                            courseId: list[item]['courseId'],
+                            courseAuthor: list[item]['courseAuthor'],
+                            rating: list[item]['rating']);
                         return CourseHomePageDisplay(
-                          model: courseHomePageData[item],
+                          model: model,
                         );
                       },
                     ),
