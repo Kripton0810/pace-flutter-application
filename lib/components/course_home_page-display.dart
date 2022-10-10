@@ -24,6 +24,7 @@ class CourseHomePageDisplay extends StatelessWidget {
                     image: NetworkImage(model.courseImage),
                     width: 220,
                     height: 140,
+                    fit: BoxFit.cover,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 16),

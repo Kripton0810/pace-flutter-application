@@ -24,7 +24,7 @@ String coursesInfo = '''{
             "coursePrice":3400.0,
             "courseAuthor":"Amit Lal Singh",
             "rating":3.2,
-            "courseImage":"https://digital.ihg.com/is/image/ihg/ihg-trip-ideas-lp-home-featured-nyc-400x200"
+            "courseImage":"https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?cs=srgb&dl=pexels-pixabay-60597.jpg&fm=jpg"
         },
         {
             "courseId":"DS003",
