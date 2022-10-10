@@ -21,9 +21,7 @@ class CourseHomePageDisplay extends StatelessWidget {
               Stack(
                 children: [
                   Image(
-                    image: AssetImage(
-                      'assets/pic_for_background.png',
-                    ),
+                    image: NetworkImage(model.courseImage),
                     width: 220,
                     height: 140,
                   ),

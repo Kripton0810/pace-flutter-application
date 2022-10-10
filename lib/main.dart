@@ -79,11 +79,13 @@ class _HomePageState extends State<HomePage> {
                       itemCount: list.length,
                       itemBuilder: (context, item) {
                         CourseHomePageModel model = CourseHomePageModel(
-                            courseName: list[item]['courseName'],
-                            coursePrice: list[item]['coursePrice'] * 1.0,
-                            courseId: list[item]['courseId'],
-                            courseAuthor: list[item]['courseAuthor'],
-                            rating: list[item]['rating']);
+                          courseName: list[item]['courseName'],
+                          coursePrice: list[item]['coursePrice'] * 1.0,
+                          courseId: list[item]['courseId'],
+                          courseAuthor: list[item]['courseAuthor'],
+                          rating: list[item]['rating'],
+                          courseImage: list[item]['courseImage'],
+                        );
                         return CourseHomePageDisplay(
                           model: model,
                         );

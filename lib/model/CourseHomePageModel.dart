@@ -6,12 +6,13 @@ class CourseHomePageModel {
   String courseId;
   String courseAuthor;
   double rating;
+  String courseImage;
 
-  CourseHomePageModel({
-    required this.courseName,
-    required this.coursePrice,
-    required this.courseId,
-    required this.courseAuthor,
-    required this.rating,
-  });
+  CourseHomePageModel(
+      {required this.courseName,
+      required this.coursePrice,
+      required this.courseId,
+      required this.courseAuthor,
+      required this.rating,
+      required this.courseImage});
 }
