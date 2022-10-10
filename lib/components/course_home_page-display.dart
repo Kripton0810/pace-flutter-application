@@ -20,11 +20,14 @@ class CourseHomePageDisplay extends StatelessWidget {
               //stack is for love widget stars and image
               Stack(
                 children: [
-                  Image(
-                    image: NetworkImage(model.courseImage),
-                    width: 220,
-                    height: 140,
-                    fit: BoxFit.cover,
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image(
+                      image: NetworkImage(model.courseImage),
+                      width: 220,
+                      height: 140,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 16),
