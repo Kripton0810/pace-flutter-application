@@ -10,82 +10,87 @@ class HomePageBottom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<dynamic> list = courseMapInfo['data'];
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          //multiple children
-
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(
-                  top: 32,
-                  left: 20,
-                  bottom: 20,
-                ),
-                child: Text(
-                  "Popular Courses",
-                  style: TextStyle(
-                      fontFamily: "RedHatDisplay",
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                      shadows: [
-                        Shadow(
-                          color: Colors.black,
-                          blurRadius: 10,
-                          offset: Offset(0, 4),
-                        )
-                      ]),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  top: 32,
-                  right: 20,
-                  bottom: 20,
-                ),
-                child: Text(
-                  "See all",
-                  style: TextStyle(
-                      fontFamily: "DMSans",
-                      fontSize: 14,
-                      color: Color(0xff00A9B7),
-                      shadows: [
-                        Shadow(
-                          blurRadius: 7,
-                          offset: Offset(0, 3),
+    List<dynamic> list = courseMapInfo;
+    print(list.length);
+    return Container(
+      width: double.infinity,
+      height: MediaQuery.of(context).size.height * 0.67,
+      child: ListView.builder(
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
+          itemCount: list.length,
+          itemBuilder: ((context, index) {
+            List<dynamic> infoDataList = list[index]['data'];
+            return Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 20,
+                      ),
+                      child: Text(
+                        list[index]['title'],
+                        style: TextStyle(
+                            fontFamily: "RedHatDisplay",
+                            fontWeight: FontWeight.w600,
+                            fontSize: 18,
+                            shadows: [
+                              Shadow(
+                                color: Colors.black,
+                                blurRadius: 8,
+                                offset: Offset(0, 3),
+                              )
+                            ]),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        right: 20,
+                      ),
+                      child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "See all",
+                          style: TextStyle(
+                              fontFamily: "DMSans",
+                              fontSize: 14,
+                              color: Color(0xff00A9B7),
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 8,
+                                  offset: Offset(0, 3),
+                                ),
+                              ]),
                         ),
-                      ]),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 224,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: list.length,
-              itemBuilder: (context, item) {
-                CourseHomePageModel model = CourseHomePageModel(
-                  courseName: list[item]['courseName'],
-                  coursePrice: list[item]['coursePrice'] * 1.0,
-                  courseId: list[item]['courseId'],
-                  courseAuthor: list[item]['courseAuthor'],
-                  rating: list[item]['rating'],
-                  courseImage: list[item]['courseImage'],
-                );
-                return CourseHomePageDisplay(
-                  model: model,
-                );
-              },
-            ),
-          ),
-        ],
-      ),
+                SizedBox(
+                  height: 224,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: infoDataList.length,
+                    itemBuilder: (context, item) {
+                      CourseHomePageModel model = CourseHomePageModel(
+                        courseName: infoDataList[item]['courseName'],
+                        coursePrice: infoDataList[item]['coursePrice'] * 1.0,
+                        courseId: infoDataList[item]['courseId'],
+                        courseAuthor: infoDataList[item]['courseAuthor'],
+                        rating: infoDataList[item]['rating'],
+                        courseImage: infoDataList[item]['courseImage'],
+                      );
+                      return CourseHomePageDisplay(
+                        model: model,
+                      );
+                    },
+                  ),
+                )
+              ],
+            );
+          })),
     );
   }
 }
