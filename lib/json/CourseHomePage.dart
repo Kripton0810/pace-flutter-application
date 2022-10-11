@@ -39,7 +39,7 @@ String coursesInfo = '''[
       ]
     },
     {
-      "title":"Popular Courses",
+      "title":"School Courses",
       "data":[
           {
               "courseId":"DS001",

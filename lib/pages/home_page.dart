@@ -29,6 +29,8 @@ class HomePageBottom extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(
                         left: 20,
+                        top: 20,
+                        bottom: 20,
                       ),
                       child: Text(
                         list[index]['title'],
@@ -48,23 +50,27 @@ class HomePageBottom extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(
                         right: 20,
+                        top: 20,
+                        bottom: 20,
                       ),
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "See all",
-                          style: TextStyle(
-                              fontFamily: "DMSans",
-                              fontSize: 14,
-                              color: Color(0xff00A9B7),
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 8,
-                                  offset: Offset(0, 3),
-                                ),
-                              ]),
-                        ),
-                      ),
+                      child: infoDataList.length > 2
+                          ? InkWell(
+                              onTap: () {},
+                              child: Text(
+                                "See all",
+                                style: TextStyle(
+                                    fontFamily: "DMSans",
+                                    fontSize: 14,
+                                    color: Color(0xff00A9B7),
+                                    shadows: [
+                                      Shadow(
+                                        blurRadius: 8,
+                                        offset: Offset(0, 3),
+                                      ),
+                                    ]),
+                              ),
+                            )
+                          : Text(""),
                     ),
                   ],
                 ),
