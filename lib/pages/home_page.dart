@@ -11,8 +11,7 @@ class HomePageBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<dynamic> list = courseMapInfo;
-    print(list.length);
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: MediaQuery.of(context).size.height * 0.67,
       child: ListView.builder(
