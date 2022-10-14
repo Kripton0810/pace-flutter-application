@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pace_classes_mobile_application/components/header.dart';
-import 'package:pace_classes_mobile_application/pages/home_page.dart';
+import 'package:pace_classes_mobile_application/pages/course_page_information.dart';
+import 'package:pace_classes_mobile_application/pages/main_home_page.dart';
+import 'package:pace_classes_mobile_application/routes/application_route.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -33,19 +34,12 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: SafeArea(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            //top header for greeting
-            Header(
-              firstname: "Subhankar",
-            ),
-            HomePageBottom(),
-          ],
-        )),
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePageBase(),
+      },
+      onGenerateRoute: MyApplicationRoute.generateRoute(settings),
+      
     );
   }
 }

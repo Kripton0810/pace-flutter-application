@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:pace_classes_mobile_application/components/course_home_page-display.dart';
+import 'package:pace_classes_mobile_application/components/course_home_page_display.dart';
 import 'package:pace_classes_mobile_application/model/CourseHomePageModel.dart';
 import 'package:pace_classes_mobile_application/data/CourseHomePageModelList.dart';
+
+import '../components/course_home_page_display.dart';
 
 class HomePageBottom extends StatelessWidget {
   const HomePageBottom({Key? key}) : super(key: key);
