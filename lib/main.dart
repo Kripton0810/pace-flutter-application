@@ -35,10 +35,11 @@ class _HomePageState extends State<HomePage> {
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
+
       routes: {
         '/': (context) => HomePageBase(),
       },
-      onGenerateRoute: MyApplicationRoute.generateRoute(settings),
+      // onGenerateRoute: MyApplicationRoute.generateRoute(settings),
     );
   }
 }
